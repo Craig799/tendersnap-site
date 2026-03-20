@@ -132,9 +132,9 @@ export default function Home() {
               <Image
                 src="/tendersnap-logo-2.svg"
                 alt="TenderSnap logo"
-                width={180}
-                height={48}
-                className="h-12 w-auto"
+                width={1260}
+                height={336}
+                className="h-[21rem] w-auto max-w-full"
                 priority
               />
             </div>
@@ -287,7 +287,7 @@ export default function Home() {
 
       <footer className="flex flex-col gap-3 border-t border-white/10 pt-6 text-center text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:gap-3">
-          <Image src="/tendersnap-logo-2.svg" alt="TenderSnap logo" width={120} height={32} className="h-8 w-auto" />
+          <Image src="/tendersnap-logo-2.svg" alt="TenderSnap logo" width={600} height={160} className="h-[10rem] w-auto max-w-full" />
           <p>
             © {new Date().getFullYear()} TenderSnap. Built in Western Australia · ABN 92256927605
           </p>

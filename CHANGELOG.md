@@ -40,3 +40,4 @@ I’ll log every change request here (date + source + checklist) before touching
 ## 2026-03-20 – Logo v2 & button contrast
 - [x] Swap hero/footer logos to tendersnap-logo-2.svg
 - [x] Force white CTA buttons with brand-blue text
+- [x] Rescale hero logo (7x) and footer logo (5x)
