@@ -267,7 +267,7 @@ export default function Home() {
         </ul>
         <div className="mt-6">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
-            Niches covered via WA Tenders
+            Niches covered
           </p>
           <div className="mt-3 grid gap-3 text-sm text-white/80 sm:grid-cols-2 lg:grid-cols-3">
             {waNiches.map((niche) => (

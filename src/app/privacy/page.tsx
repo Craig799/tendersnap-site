@@ -34,7 +34,7 @@ export default function PrivacyPage() {
       <section className="space-y-3 text-sm text-white/80">
         <h2 className="text-xl font-semibold text-white">How we use it</h2>
         <p>
-          We use your details to configure alert filters, send you WA tender summaries, invoice the
+          We use your details to configure alert filters, send you tender summaries, invoice the
           subscription, and respond to support queries. Data is stored in Australian or trusted
           international infrastructure (Supabase, email, and payment providers) under standard
           security controls.
