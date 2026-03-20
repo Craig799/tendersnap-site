@@ -118,17 +118,39 @@ const stats = [
     detail: ""
   },
 ];
+const painPoints = [
+  "Scrubbing multiple portals or PDFs every morning steals billable hours.",
+  "Tender specs rarely match your niche on the first pass, so you re-filter the same data.",
+  "Submission windows close while you chase missing briefs, contacts, or attachments.",
+  "Keeping a team aligned across email threads and shared spreadsheets invites errors.",
+  "Alerting tools charge enterprise prices before you’ve even won your first contract."
+];
+
+const waNiches = [
+  "Building & Construction",
+  "Civil & Roadworks",
+  "Consultancy & Professional Services",
+  "Electrical & ICT",
+  "Environmental & Waste",
+  "Facilities Maintenance",
+  "Fleet & Transport",
+  "Health & Community Services",
+  "Landscaping & Parks",
+  "Mechanical & Plant",
+  "Utilities, Energy & Water",
+  "Education & Training"
+];
 
 export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-content flex-col gap-20 px-4 py-16 text-white lg:px-6 lg:py-24">
       <section className="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_420px]">
         <div className="space-y-6">
-          <div className="space-y-4 text-center">
+          <div className="space-y-2 text-center sm:space-y-3">
             <h1 className="text-4xl font-semibold sm:text-5xl">
               Only the government tenders you want sent straight to you
             </h1>
-            <div className="flex justify-center py-4">
+            <div className="flex justify-center">
               <Image
                 src="/tendersnap-logo-3.svg"
                 alt="TenderSnap logo"
@@ -230,6 +252,33 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-glow">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+          Why tenders feel so hard
+        </p>
+        <h2 className="mt-2 text-3xl font-semibold text-white">Pain points we remove for busy operators</h2>
+        <ul className="mt-4 space-y-3 text-sm text-white/70">
+          {painPoints.map((point) => (
+            <li key={point} className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-white/60" />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
+            Niches covered via WA Tenders
+          </p>
+          <div className="mt-3 grid gap-3 text-sm text-white/80 sm:grid-cols-2 lg:grid-cols-3">
+            {waNiches.map((niche) => (
+              <div key={niche} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                {niche}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="space-y-8">
         <div className="flex flex-col gap-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
@@ -293,10 +342,10 @@ export default function Home() {
           </p>
         </div>
         <div className="flex items-center justify-center gap-4">
-          <a href="mailto:hello@tendersnap.com" className="hover:text-white">
+          <a href="mailto:support@tendersnap.com.au" className="hover:text-white">
             Contact
           </a>
-          <a href="#" className="hover:text-white">
+          <a href="/privacy" className="hover:text-white">
             Privacy
           </a>
         </div>

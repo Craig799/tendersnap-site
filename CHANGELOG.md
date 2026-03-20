@@ -43,3 +43,9 @@ I’ll log every change request here (date + source + checklist) before touching
 - [x] Rescale hero logo (7x) and footer logo (5x)
 - [x] Swap to trimmed tendersnap-logo-3.svg
 - [x] Tighten spacing around hero/footer logos
+
+## 2026-03-20 – SEO & privacy improvements
+- [x] Add FAQ + organization structured data and social share image
+- [x] Publish tender pain points section with WA niches list
+- [x] Standardise contact links to support@tendersnap.com.au
+- [x] Add dedicated privacy/terms page and link in footer
