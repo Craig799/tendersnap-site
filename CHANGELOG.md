@@ -33,6 +33,10 @@ I’ll log every change request here (date + source + checklist) before touching
 - [x] Trim final disclaimer to "No spam. Unsubscribe anytime"
 
 ## 2026-03-20 – Logo & footer details
-- [ ] Add logo between hero headline and subhead with balanced spacing
-- [ ] Make both lead-form buttons white with blue text
-- [ ] Drop logo in footer (smaller) and append ABN 92256927605
+- [x] Add logo between hero headline and subhead with balanced spacing
+- [x] Make both lead-form buttons white with blue text
+- [x] Drop logo in footer (smaller) and append ABN 92256927605
+
+## 2026-03-20 – Logo v2 & button contrast
+- [x] Swap hero/footer logos to tendersnap-logo-2.svg
+- [x] Force white CTA buttons with brand-blue text
