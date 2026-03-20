@@ -42,3 +42,4 @@ I’ll log every change request here (date + source + checklist) before touching
 - [x] Force white CTA buttons with brand-blue text
 - [x] Rescale hero logo (7x) and footer logo (5x)
 - [x] Swap to trimmed tendersnap-logo-3.svg
+- [x] Tighten spacing around hero/footer logos
