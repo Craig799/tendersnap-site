@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 
-const defaultMessage =
-  "Thanks for your interest! We'll confirm your access shortly.";
+const defaultMessage = "";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -82,18 +81,20 @@ export default function LeadForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="mt-1 w-full rounded-xl bg-white px-4 py-3 text-sm font-semibold text-brand-navy transition hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-70"
+          className="mt-1 w-full rounded-xl bg-brand-navy px-4 py-3 text-sm font-semibold text-white transition hover:bg-brand-navy/80 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {status === "loading" ? "Adding…" : "Start catching tenders"}
         </button>
       </div>
-      <p
-        className={`text-xs font-medium sm:col-span-3 ${
-          status === "error" ? "text-white" : "text-white/70"
-        }`}
-      >
-        {message}
-      </p>
+      {message && (
+        <p
+          className={`text-xs font-medium sm:col-span-3 ${
+            status === "error" ? "text-white" : "text-white/70"
+          }`}
+        >
+          {message}
+        </p>
+      )}
     </form>
   );
 }

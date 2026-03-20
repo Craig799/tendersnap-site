@@ -97,11 +97,17 @@ export default function TenderGallery({ tenders }: { tenders: Tender[] }) {
               href={activeTender.link}
               target="_blank"
               rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-brand-navy transition hover:bg-white/90"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-navy/80"
             >
               Open full tender
               <ExternalLink size={16} />
             </a>
+            <p className="mt-3 break-all text-xs text-white/70">
+              Source:{" "}
+              <a href={activeTender.link} target="_blank" rel="noreferrer" className="underline">
+                {activeTender.link}
+              </a>
+            </p>
           </div>
         </div>
       )}

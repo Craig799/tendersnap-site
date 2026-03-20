@@ -4,7 +4,6 @@ import {
   BarChart3,
   ShieldCheck,
   Sparkles,
-  Star,
 } from "lucide-react";
 
 import LeadForm from "@/components/lead-form";
@@ -13,8 +12,8 @@ import FAQAccordion from "@/components/faq-accordion";
 
 const valueProps = [
   {
-    title: "Smart scraping",
-    body: "Purpose-built crawlers sweep WA + national portals every morning and after major updates.",
+    title: "Smart searching",
+    body: "Purpose built crawlers search all state and council government portals daily and after major updates.",
     icon: Activity,
   },
   {
@@ -24,7 +23,7 @@ const valueProps = [
   },
   {
     title: "Action-ready summaries",
-    body: "Concise briefs surface deadlines, key requirements, and contacts in one glance.",
+    body: "Concise briefs, surface deadlines, key requirements, and contacts in one glance.",
     icon: ShieldCheck,
   },
 ];
@@ -87,22 +86,22 @@ const faqs = [
   {
     question: "Where do you source tenders?",
     answer:
-      "We monitor WA government portals, AusTender, select council feeds, and high-signal regional boards. Each source is deduplicated so you don't see repeats.",
+      "We monitor all government portals from state to local. Each source is deduplicated so you don't see repeats.",
   },
   {
     question: "How often are alerts sent?",
     answer:
-      "Morning digest at 7:30am AWST, plus instant pings when something matches your filters during business hours.",
+      "Alerts are sent daily, Monday to Friday. Depending on your niches you may receive five a day or one—it all depends on when tenders are released to the public.",
   },
   {
     question: "Can I track multiple niches?",
     answer:
-      "Yes. Most customers monitor 2–4 niches (e.g., landscaping + FM). Pricing stays flat at $29/mo during the founding phase.",
+      "Yes. Most customers monitor 2–4 niches (e.g., landscaping + FM). Pricing stays flat at $29/month.",
   },
   {
     question: "What happens after I sign up?",
     answer:
-      "We set up your filters, share a live sample view, and give you a direct Slack/email channel for tweaks within 24 hours.",
+      "We send you a confirmation email with our support links, set up your filters, and you'll receive an email alert as soon as tenders are posted that fit your requirements.",
   },
 ];
 
@@ -124,17 +123,14 @@ export default function Home() {
     <main className="mx-auto flex w-full max-w-content flex-col gap-20 px-4 py-16 text-white lg:px-6 lg:py-24">
       <section className="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_420px]">
         <div className="space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white/80">
-            <Star size={14} /> WA tender intelligence, human tone
-          </div>
-          <div className="space-y-4">
+          <div className="space-y-4 text-center">
             <h1 className="text-4xl font-semibold sm:text-5xl">
               Only the government tenders you want sent straight to you
             </h1>
             <p className="text-lg text-white/80">
               TenderSnap is the simplest way to only see the government tenders you want. No complicated dashboards, human support and alerts that feel like a partner, not another feed.
             </p>
-            <div>
+            <div className="space-y-1">
               <p className="text-4xl font-semibold">Only $29/mo</p>
               <p className="text-sm text-white/70">Cancel anytime · No lock-in</p>
             </div>
@@ -144,7 +140,7 @@ export default function Home() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-4"
+                className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
                   {stat.label}
@@ -157,9 +153,6 @@ export default function Home() {
           </div>
         </div>
         <div className="rounded-[32px] border border-white/15 bg-white/5 p-8 shadow-glow backdrop-blur">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/70">
-            Preview
-          </p>
           <p className="mt-3 text-2xl font-semibold">
             Filters locked to your niche, value, and region.
           </p>
@@ -197,7 +190,7 @@ export default function Home() {
 
       <section className="space-y-8">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
-          Why TenderSnap
+          Why TenderSnap?
         </p>
         <div className="grid gap-6 md:grid-cols-3">
           {valueProps.map((value) => (
@@ -211,20 +204,17 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <div className="rounded-3xl border border-white/10 bg-white/10 p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.4em] text-white/70">
-            Founding price
-          </p>
-          <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div className="rounded-3xl border border-white/10 bg-white/10 p-8 text-center">
+          <div className="mt-4 flex flex-col items-center gap-4">
             <p className="text-4xl font-semibold text-white">$29/mo</p>
             <p className="text-white/70">
-              Competitors charge more for noisy dashboards and delayed alerts. TenderSnap keeps it precise and human.
+              Why pay more for clunky systems, complicated dashboards, and delayed alerts? For less than $1 a day TenderSnap saves you time, and keeps it precise.
             </p>
           </div>
-          <ul className="mt-4 flex flex-wrap gap-4 text-sm text-white/70">
+          <ul className="mt-4 flex flex-wrap justify-center gap-4 text-sm text-white/70">
             <li>Unlimited niches & locations</li>
             <li>Cancel anytime, no setup fees</li>
-            <li>Hands-on onboarding & support</li>
+            <li>Real human support</li>
           </ul>
         </div>
       </section>
@@ -236,7 +226,7 @@ export default function Home() {
           </p>
           <h2 className="text-3xl font-semibold text-white">Recent tender snapshots</h2>
           <p className="text-sm text-white/70">
-            Real data from last week’s scrape. Click to see the briefing-level detail your alerts include.
+            Real data from last week’s search. Click to see the briefing-level detail your alerts include.
           </p>
         </div>
         <TenderGallery tenders={tenderExamples} />
@@ -258,33 +248,28 @@ export default function Home() {
             FAQ
           </p>
           <h2 className="mt-2 text-3xl font-semibold text-white">Answers before you ask.</h2>
-          <p className="mt-2 text-sm text-white/70">
-            Still unsure? Drop your questions in the form above and I’ll reply the same day.
-          </p>
           <div className="mt-6">
             <FAQAccordion faqs={faqs} />
           </div>
+          <p className="mt-4 text-sm text-white/70">
+            Still unsure? Contact us at support@tendersnap.com.au and we’ll reply the same day.
+          </p>
         </div>
       </section>
 
       <section className="rounded-[40px] border border-white/15 bg-white/10 p-10 shadow-glow">
         <div className="grid gap-10 lg:grid-cols-2">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
-              Final call
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold text-white">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold text-white">
               Ready to snap up the right tenders?
             </h2>
             <p className="mt-3 text-white/70">
-              I’ll personalise your filters, share a live dashboard, and plug you into real alerts within 24 hours.
+              We’ll personalise your filters and plug you into real alerts within 24 hours.
             </p>
           </div>
           <div className="space-y-4">
             <LeadForm />
-            <p className="text-xs text-white/70">
-              No spam. Unsubscribe anytime. We’ll confirm details the moment Supabase is connected.
-            </p>
+            <p className="text-xs text-white/70">No spam. Unsubscribe anytime.</p>
           </div>
         </div>
       </section>
