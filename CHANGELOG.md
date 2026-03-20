@@ -49,3 +49,8 @@ I’ll log every change request here (date + source + checklist) before touching
 - [x] Publish tender pain points section with WA niches list
 - [x] Standardise contact links to support@tendersnap.com.au
 - [x] Add dedicated privacy/terms page and link in footer
+
+## 2026-03-20 – Stripe checkout foundation
+- [x] Added Stripe SDK plus checkout + webhook API routes with test credentials
+- [x] Introduced a Checkout CTA on the hero and created a success page placeholder
+- [x] Stored live vs test Stripe env files for future cutover

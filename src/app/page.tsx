@@ -9,6 +9,7 @@ import {
 import LeadForm from "@/components/lead-form";
 import TenderGallery from "@/components/tender-gallery";
 import FAQAccordion from "@/components/faq-accordion";
+import CheckoutButton from "@/components/checkout-button";
 import Image from "next/image";
 
 const valueProps = [
@@ -167,6 +168,10 @@ export default function Home() {
               <p className="text-4xl font-semibold">Only $29/mo</p>
               <p className="text-sm text-white/70">Cancel anytime · No lock-in</p>
             </div>
+          </div>
+          <div className="flex flex-col items-center gap-2 text-center">
+            <CheckoutButton label="Start subscription — $29/mo" size="lg" />
+            <p className="text-xs text-white/70">Need to chat first? Join the shortlist below.</p>
           </div>
           <LeadForm />
           <div className="grid gap-4 sm:grid-cols-2">
