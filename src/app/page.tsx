@@ -9,6 +9,7 @@ import {
 import LeadForm from "@/components/lead-form";
 import TenderGallery from "@/components/tender-gallery";
 import FAQAccordion from "@/components/faq-accordion";
+import Image from "next/image";
 
 const valueProps = [
   {
@@ -127,6 +128,16 @@ export default function Home() {
             <h1 className="text-4xl font-semibold sm:text-5xl">
               Only the government tenders you want sent straight to you
             </h1>
+            <div className="flex justify-center py-4">
+              <Image
+                src="/tendersnap-logo.svg"
+                alt="TenderSnap logo"
+                width={180}
+                height={48}
+                className="h-12 w-auto"
+                priority
+              />
+            </div>
             <p className="text-lg text-white/80">
               TenderSnap is the simplest way to only see the government tenders you want. No complicated dashboards, human support and alerts that feel like a partner, not another feed.
             </p>
@@ -275,7 +286,12 @@ export default function Home() {
       </section>
 
       <footer className="flex flex-col gap-3 border-t border-white/10 pt-6 text-center text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
-        <p>© {new Date().getFullYear()} TenderSnap. Built in Western Australia.</p>
+        <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:gap-3">
+          <Image src="/tendersnap-logo.svg" alt="TenderSnap logo" width={120} height={32} className="h-8 w-auto" />
+          <p>
+            © {new Date().getFullYear()} TenderSnap. Built in Western Australia · ABN 92256927605
+          </p>
+        </div>
         <div className="flex items-center justify-center gap-4">
           <a href="mailto:hello@tendersnap.com" className="hover:text-white">
             Contact

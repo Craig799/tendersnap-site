@@ -31,3 +31,8 @@ I’ll log every change request here (date + source + checklist) before touching
 - [x] Update final subhead copy
 - [x] Make final CTA button text visible (blue background)
 - [x] Trim final disclaimer to "No spam. Unsubscribe anytime"
+
+## 2026-03-20 – Logo & footer details
+- [ ] Add logo between hero headline and subhead with balanced spacing
+- [ ] Make both lead-form buttons white with blue text
+- [ ] Drop logo in footer (smaller) and append ABN 92256927605
