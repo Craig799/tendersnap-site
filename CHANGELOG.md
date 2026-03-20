@@ -41,3 +41,4 @@ I’ll log every change request here (date + source + checklist) before touching
 - [x] Swap hero/footer logos to tendersnap-logo-2.svg
 - [x] Force white CTA buttons with brand-blue text
 - [x] Rescale hero logo (7x) and footer logo (5x)
+- [x] Swap to trimmed tendersnap-logo-3.svg
