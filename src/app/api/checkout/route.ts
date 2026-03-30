@@ -17,7 +17,6 @@ export async function POST() {
       mode: "subscription",
       payment_method_types: ["card"],
       billing_address_collection: "required",
-      customer_creation: "if_required",
       allow_promotion_codes: true,
       line_items: [
         {

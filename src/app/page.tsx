@@ -11,6 +11,7 @@ import TenderGallery from "@/components/tender-gallery";
 import FAQAccordion from "@/components/faq-accordion";
 import CheckoutButton from "@/components/checkout-button";
 import Image from "next/image";
+import { fetchLatestTenderCards } from "@/lib/tenders";
 
 const valueProps = [
   {
@@ -142,7 +143,10 @@ const waNiches = [
   "Education & Training"
 ];
 
-export default function Home() {
+export default async function Home() {
+  const latestTenders = await fetchLatestTenderCards(6, ["WA", "NSW"]);
+  const tendersForGallery = latestTenders.length ? latestTenders : tenderExamples;
+
   return (
     <main className="mx-auto flex w-full max-w-content flex-col gap-20 px-4 py-16 text-white lg:px-6 lg:py-24">
       <section className="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_420px]">
@@ -294,7 +298,7 @@ export default function Home() {
             Real data from last week’s search. Click to see the briefing-level detail your alerts include.
           </p>
         </div>
-        <TenderGallery tenders={tenderExamples} />
+        <TenderGallery tenders={tendersForGallery} />
       </section>
 
       <section className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">

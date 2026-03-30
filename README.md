@@ -32,13 +32,26 @@ npm run start # serves .next/ output
 Deploy on any Node-compatible host (Vercel, Render, Fly, etc.).
 
 ## Environment variables
-Create a `.env.local` file and add the following once your Supabase project is ready:
+Create a `.env.local` file and add the following once your Supabase + Stripe projects are ready:
 ```
 SUPABASE_URL="https://<your-project>.supabase.co"
 SUPABASE_SERVICE_ROLE_KEY="<service-role-key>"
-SUPABASE_LEADS_TABLE="leads" # optional, defaults to "leads"
+SUPABASE_TENDERS_TABLE="tenders" # optional
+SUPABASE_LEADS_TABLE="leads"      # optional
+
+STRIPE_SECRET_KEY="sk_live_xxx"
+STRIPE_PUBLISHABLE_KEY="pk_live_xxx"
+STRIPE_PRICE_ID="price_xxx"
+STRIPE_WEBHOOK_SECRET="whsec_xxx"
+NEXT_PUBLIC_SITE_URL="https://www.tendersnap.com.au"
+
+# Optional but recommended for onboarding emails
+RESEND_API_KEY="re_xxx"
+RESEND_FROM_EMAIL="TenderSnap <support@tendersnap.com.au>"
 ```
-The API route at `src/app/api/subscribe/route.ts` inserts rows with `{ email, niche, source }`. Until keys are provided the endpoint returns a 202 status with a friendly confirmation message so visitors still get feedback.
+The API routes use these keys as follows:
+- `src/app/api/subscribe/route.ts` (lead form) inserts `{ email, niche, source }` rows into Supabase. Without keys it returns a 202 so visitors still see a confirmation message.
+- `src/app/api/onboarding/route.ts` (post-checkout filters) stores `{ email, niches[], regions[], notes }` inside `leads.metadata`. If `RESEND_API_KEY` is present it also sends a confirmation email via Resend.
 
 ## Deployment checklist
 1. Set the env vars above in your hosting platform.
