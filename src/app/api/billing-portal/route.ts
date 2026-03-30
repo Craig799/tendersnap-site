@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { stripe } from "@/lib/stripe";
+import { getStripeClient } from "@/lib/stripe";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tendersnap.com.au";
 
@@ -11,6 +11,7 @@ export async function POST(request: Request) {
   }
 
   try {
+    const stripe = getStripeClient();
     const session = await stripe.checkout.sessions.retrieve(sessionId as string);
     const customer = session.customer;
 

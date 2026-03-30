@@ -1,7 +1,7 @@
 import Link from "next/link";
 import NicheOnboardingForm from "@/components/niche-onboarding-form";
 import BillingPortalButton from "@/components/billing-portal-button";
-import { stripe } from "@/lib/stripe";
+import { getStripeClient } from "@/lib/stripe";
 
 type SuccessPageProps = {
   searchParams: { session_id?: string };
@@ -13,6 +13,7 @@ export default async function SuccessPage({ searchParams }: SuccessPageProps) {
 
   if (searchParams.session_id) {
     try {
+      const stripe = getStripeClient();
       const session = await stripe.checkout.sessions.retrieve(searchParams.session_id);
       prefillEmail = session.customer_details?.email ?? undefined;
       stripeSessionId = session.id;

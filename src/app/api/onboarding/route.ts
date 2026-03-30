@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { randomUUID } from "crypto";
-import { stripe } from "@/lib/stripe";
+import { getStripeClient } from "@/lib/stripe";
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -280,6 +280,7 @@ export async function POST(request: Request) {
       );
     }
 
+    const stripe = getStripeClient();
     const session = await stripe.checkout.sessions.retrieve(stripeSessionId);
     const stripeCustomerId = typeof session.customer === "string" ? session.customer : null;
     const manageToken = randomUUID();
