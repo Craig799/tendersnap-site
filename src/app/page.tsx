@@ -16,7 +16,7 @@ import { fetchLatestTenderCards } from "@/lib/tenders";
 const valueProps = [
   {
     title: "Smart searching",
-    body: "Purpose built crawlers search all state and council government portals daily and after major updates.",
+    body: "Purpose-built crawlers sweep every WA + NSW state and council portal daily (national feeds next).",
     icon: Activity,
   },
   {
@@ -112,12 +112,17 @@ const stats = [
   {
     label: "WA roots",
     value: "WA built, owned & operated",
-    detail: ""
+    detail: "",
   },
   {
     label: "Coverage",
-    value: "Covering all Government Tenders Australia wide",
-    detail: ""
+    value: "WA + NSW tenders refreshed nightly",
+    detail: "",
+  },
+  {
+    label: "Next up",
+    value: "National rollout in progress",
+    detail: "",
   },
 ];
 const painPoints = [
@@ -152,6 +157,9 @@ export default async function Home() {
       <section className="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_420px]">
         <div className="space-y-6">
           <div className="space-y-2 text-center sm:space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+              Now covering WA + NSW
+            </p>
             <h1 className="text-4xl font-semibold sm:text-5xl">
               Only the government tenders you want sent straight to you
             </h1>
@@ -166,7 +174,7 @@ export default async function Home() {
               />
             </div>
             <p className="text-lg text-white/80">
-              TenderSnap is the simplest way to only see the government tenders you want. No complicated dashboards, human support and alerts that feel like a partner, not another feed.
+              TenderSnap is the simplest way to only see the government tenders you want. Now live for Western Australia and New South Wales, with human support and alerts that feel like a partner, not another feed.
             </p>
             <div className="space-y-1">
               <p className="text-4xl font-semibold">Only $29/mo</p>
